@@ -1,0 +1,39 @@
+name: Agentscript
+
+on:
+  push:
+    branches:
+      - "**"
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  policy:
+    name: Validate Agentscript policies
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out project
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Check out Agentscript
+        uses: actions/checkout@v4
+        with:
+          repository: VishuKalier2003/Agentscript
+          ref: main
+          path: agentscript
+
+      - name: Install Rust
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Build Agentscript
+        working-directory: agentscript
+        run: cargo build --release --locked
+
+      - name: Run Agentscript policies
+        run: ./agentscript/target/release/crane check --json

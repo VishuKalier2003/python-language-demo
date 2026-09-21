@@ -1,0 +1,4 @@
+policy payment_service {
+    checkpoint baseline
+    preserve --function PaymentService.charge
+}

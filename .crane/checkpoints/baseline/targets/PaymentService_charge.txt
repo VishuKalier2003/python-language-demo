@@ -1,0 +1,2 @@
+def charge(self, amount):
+        return amount * 2
