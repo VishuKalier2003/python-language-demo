@@ -10,6 +10,10 @@ on:
 permissions:
   contents: read
 
+env:
+  CRANE_VERSION: v0.1.2
+  CRANE_SHA256: c94f27941d025167f5f767df3d823c6563f7677eb3e1daefddb7924cc7106e1b
+
 jobs:
   policy:
     name: Validate Agentscript policies
@@ -21,19 +25,24 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Check out Agentscript
-        uses: actions/checkout@v4
-        with:
-          repository: VishuKalier2003/Agentscript
-          ref: main
-          path: agentscript
+      - name: Download pinned Crane release
+        shell: bash
+        run: |
+          set -euo pipefail
+          archive="crane-${CRANE_VERSION}-x86_64-unknown-linux-gnu.tar.gz"
+          url="https://github.com/VishuKalier2003/Agentscript/releases/download/${CRANE_VERSION}"
+          curl --fail --silent --show-error --location \
+            --output "$archive" "$url/$archive"
+          printf '%s  %s\n' "$CRANE_SHA256" "$archive" | sha256sum --check -
+          mkdir -p .crane-bin
+          tar -xzf "$archive" --strip-components=1 -C .crane-bin
+          chmod +x .crane-bin/crane
 
-      - name: Install Rust
-        uses: dtolnay/rust-toolchain@stable
+      - name: Verify Crane release
+        run: ./.crane-bin/crane --version
 
-      - name: Build Agentscript
-        working-directory: agentscript
-        run: cargo build --release --locked
+      - name: Show active Crane context
+        run: ./.crane-bin/crane context
 
-      - name: Run Agentscript policies
-        run: ./agentscript/target/release/crane check --json
+      - name: Run Crane policies
+        run: ./.crane-bin/crane check --json
