@@ -2,3 +2,8 @@ policy tax_calculation {
     checkpoint baseline
     preserve --function calculate_tax
 }
+
+policy change {
+    checkpoint testing
+    preserve --function check
+}

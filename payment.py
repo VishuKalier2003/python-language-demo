@@ -7,4 +7,4 @@ def calculate_tax(amount):
     return amount * 0.18
 
 def check(amount):
-    return amount > 10
+    return amount > 100
