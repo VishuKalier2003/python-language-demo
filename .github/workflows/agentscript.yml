@@ -11,7 +11,7 @@ permissions:
   contents: read
 
 env:
-  CRANE_VERSION: v0.1.2
+  CRANE_VERSION: v0.1.5
   CRANE_SHA256: c94f27941d025167f5f767df3d823c6563f7677eb3e1daefddb7924cc7106e1b
 
 jobs:

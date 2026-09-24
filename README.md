@@ -88,3 +88,20 @@ crane agent verify --profile claude
 `agent init` initializes and immediately verifies the repository. `agent verify`
 returns the stable JSON result and a non-zero exit status when repair is
 required. These commands never move checkpoints or modify application source.
+
+## Automatic Claude Code integration
+
+The checked-in [`.claude/settings.json`](./.claude/settings.json) configures
+Claude Code hooks for this repository. After `crane` is installed on `PATH`,
+Claude Code automatically:
+
+1. receives `crane context` at session start;
+2. runs `crane check --agent` after file-editing tools;
+3. receives structured violations and can repair the repository; and
+4. runs one final verification before stopping.
+
+The user only needs to describe the requested change. The hook does not move
+the checkpoint, change policies, or edit source code. It invokes the installed
+Crane release and returns its JSON result and exit status to Claude Code.
+Restart Claude Code after changing `PATH`, then open this repository as the
+project directory so its project hooks are loaded.
