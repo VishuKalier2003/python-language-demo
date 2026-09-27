@@ -12,7 +12,7 @@ permissions:
 
 env:
   CRANE_VERSION: v0.2.0
-  CRANE_SHA256: c94f27941d025167f5f767df3d823c6563f7677eb3e1daefddb7924cc7106e1b
+  CRANE_SHA256: d30f5d8c220d3308a528d5243716be32037157bfaba2fc5dc45474d5c9f7de12
 
 jobs:
   policy:
