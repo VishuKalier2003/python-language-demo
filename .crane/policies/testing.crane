@@ -1,4 +1,4 @@
 policy change {
-    checkpoint testing
-    preserve --function check
+    checkpoint testing;
+    preserve --function check;
 }
