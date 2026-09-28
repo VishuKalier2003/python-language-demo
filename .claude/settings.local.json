@@ -1,4 +1,11 @@
 {
+  "permissions": {
+    "deny": [
+      "Edit(./.crane/**)",
+      "Edit(./.claude/settings.json)",
+      "Edit(./.claude/settings.local.json)"
+    ]
+  },
   "hooks": {
     "SessionStart": [
       {
@@ -27,6 +34,17 @@
           {
             "type": "command",
             "command": "crane agent hook --event post-tool-use --profile claude"
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "crane agent hook --event pre-tool-use --profile claude"
           }
         ]
       }
