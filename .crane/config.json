@@ -1,0 +1,22 @@
+{
+  "autonomy": {
+    "costs": {
+      "execute": 3,
+      "network": 5,
+      "other": 2,
+      "read": 0,
+      "violation_penalty": 10,
+      "write": 2,
+      "write_selection_file": 3
+    },
+    "credit_ttl_seconds": 28800,
+    "low_credit_threshold": 20,
+    "mode": "delegated",
+    "quarantine_after_bypass_attempts": 3,
+    "session_credits": 100
+  },
+  "default_checkpoint": "testing",
+  "default_policy": "default",
+  "format": 1,
+  "tests": []
+}

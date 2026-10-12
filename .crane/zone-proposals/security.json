@@ -1,0 +1,73 @@
+{
+  "activation": null,
+  "active": false,
+  "digest": "sha256:f4937fdee5b151d0627d6d077aed84758e01a14a36593ed0f378c0ddd1a32eb5",
+  "discovered_by": {
+    "head": "e88da8150ca51be5d872cbbb181ca894f7b19413",
+    "recommender": "zone-recommender@1",
+    "run": "discovery-2f9ea0cfc12d"
+  },
+  "history": [
+    {
+      "action": "proposed",
+      "at": 1791373657,
+      "by": "vishukalier123@gmail.com",
+      "detail": {
+        "run": "discovery-2f9ea0cfc12d"
+      },
+      "digest": "sha256:f4937fdee5b151d0627d6d077aed84758e01a14a36593ed0f378c0ddd1a32eb5",
+      "revision": 1
+    }
+  ],
+  "id": "security",
+  "recommendation": {
+    "affected": {
+      "entities": 2,
+      "entity_examples": [
+        "symbol:python:auth.login.hash_password",
+        "symbol:python:auth.login.verify_password"
+      ],
+      "files": [
+        "auth/login.py"
+      ]
+    },
+    "autonomy": "observe",
+    "category": "security",
+    "confidence": "medium",
+    "covered_by_active_zones": false,
+    "criticality": "restricted",
+    "digest": "sha256:f4937fdee5b151d0627d6d077aed84758e01a14a36593ed0f378c0ddd1a32eb5",
+    "rationale": [
+      "1 module(s) hold authentication, authorization, and secrets: 2 symbol(s) show it"
+    ],
+    "safety_state": "active",
+    "selector_status": [
+      {
+        "selector": "module python:auth.login",
+        "status": "resolved"
+      }
+    ],
+    "selectors": [
+      "module python:auth.login"
+    ],
+    "signals": [
+      {
+        "examples": [
+          "hash_password",
+          "verify_password"
+        ],
+        "signal": "secrets_name:password",
+        "symbols": 2
+      }
+    ],
+    "sources": [
+      "proposals:engine"
+    ]
+  },
+  "rejection": null,
+  "review_format": 1,
+  "revision": 1,
+  "status": "proposed",
+  "zone_id": "security",
+  "zone_text": "zone security {\n    criticality restricted;\n    autonomy observe;\n    state active;\n    select module python:auth.login;\n}\n"
+}

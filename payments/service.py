@@ -9,5 +9,7 @@ class PaymentService:
         return amount // 10
 
 
+# @crane:selection:1D81J0KB:start
 def calculate_tax(amount):
     return amount * 0.18
+# @crane:selection:1D81J0KB:end
