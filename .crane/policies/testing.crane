@@ -1,4 +1,0 @@
-policy change {
-    checkpoint testing;
-    preserve --function check;
-}

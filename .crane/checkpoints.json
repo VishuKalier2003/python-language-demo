@@ -1,0 +1,15 @@
+{
+  "checkpoints": [
+    {
+      "branch": "test/policy-run-b",
+      "commit": "e88da8150ca51be5d872cbbb181ca894f7b19413",
+      "created_at": 1791795051,
+      "created_by": "VishuKalier2003",
+      "digest": "d8be5bc93dd148ac54351ba6a9e08c8b63f6fd2a756595a52a8e940e6344ea332faca046f5790d323ef9f62638e9a7db14e7afbe8e7f47934da6119069e7b59e",
+      "name": "testing",
+      "previous": "genesis",
+      "tree": "635ff537f917255a2cf20185042d11c1423a6906"
+    }
+  ],
+  "format": 1
+}

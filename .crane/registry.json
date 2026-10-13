@@ -1,0 +1,60 @@
+{
+  "manifest": {
+    "audit_head": "3ccb9018702557bba5501b8ddb7b1aad51943f0cffa9d6439cb8ca5ddea148fafa9c604d743ddabf8ae3e566858f0eab245d7ae7b224618544d686b4da61d827",
+    "checkpoints_digest": "f6d0c7d74cbf816776f37f904b697ef4cfbbda881753c45da0e546b49c11028990217a88a3866c89c8f431091999d5153a264ab90faff2dfcddcb7922d0bf776",
+    "config_digest": "2f9bf0eefec646836afa7f4d1ed5dddf83e1584352bb2b0fe7a5a471f21e9ee7ffee86c75a1ba020861c71c6cbb125b591135cf6abe6ea90d669bb7b910dcb0e",
+    "context_digest": "ea203f1977b4b0b3e554b58d53d769f2ce65ddae3cbaca328c62cb375c4951868974faf65df0afc09f63aaa5ff8ae50c2b499c0637b35db76a26b9624a824982",
+    "format": 1,
+    "generation": 3,
+    "head": "848501da760fa70b0fdfdc87e23f4efa92a60b24fc14b37ad9a741a389521cdace42896a6706b2e84ef0ba5a06c6d8a3f469dbf03c6eee364c1abf138a02e31d",
+    "previous_head": "35b44b155fd741701c19f44a8fe68bf3dc259558aad8b42317999d99ed6fd3cbe45d52bdfd30e005a46ea0adcf7d0d398c7cdacce3ba09b86d59d304a7bb7607",
+    "public_key": "7cc8f2bc26467e7b9e38c47e9219ae9d3e59d91495db94ee6d685e45d1af3672",
+    "records_digest": "7d70a9ea5048c8440492e11fe65bd0802915d972242d1e8630b4a7c117ddb505e3cb1a1a09686a13e46f5930ba8eee1932d4a9942e39f0c5407df27739e8d4b0",
+    "repository_id": "427f0c2edd2f13887282bf4c4ff201b102ee0804ae5b3286c2d7456d4878c5a05d502dc1c79f2266319f5c645480e64fdca82c2ac4191828fda33ef178c4fffd",
+    "signature": "1ce0d09871a4d938f2989d12189890d5b59e61b45a9c15ca9af2c6203f816f94adfa2a7c864a2038b4e8a48fc2b3450675745ce835a6629c0dbace155b05a90e",
+    "updated_at": 1791795065,
+    "updated_by": "VishuKalier2003"
+  },
+  "selections": [
+    {
+      "change_type": null,
+      "created_at": 1791795065,
+      "created_by": "VishuKalier2003",
+      "current": {
+        "content_digest": "1c48a31cfbf32b2529a55923c22399c6b73d7c5c9b3bec5185a74a2b0837190cd8ece5c91042233a4663ce9d47e7df793508c42267d6a739d0d4dcdfe1af44c1",
+        "resolved_at_generation": 3,
+        "span": {
+          "end_byte": 291,
+          "end_line": 14,
+          "path": "payments/service.py",
+          "start_byte": 239,
+          "start_line": 13
+        }
+      },
+      "generation": 1,
+      "id": "1D81J0KB",
+      "language": "python",
+      "name": "testing",
+      "operation": "preserve",
+      "origin": {
+        "binding_digest": "f26d94e294d67df1ba542863b4b528a5015f05a716ceb4b03838175757f60fbeb4bbd8e0c915ac2bca5af56aba8126d013ed1eb32ae9f623830426ea185cdbf3",
+        "blob": "cfa89a32c45817edcef5952a8e8a65aa50fdc003",
+        "checkpoint": "testing",
+        "commit": "e88da8150ca51be5d872cbbb181ca894f7b19413",
+        "content_digest": "1c48a31cfbf32b2529a55923c22399c6b73d7c5c9b3bec5185a74a2b0837190cd8ece5c91042233a4663ce9d47e7df793508c42267d6a739d0d4dcdfe1af44c1",
+        "span": {
+          "end_byte": 257,
+          "end_line": 13,
+          "path": "payments/service.py",
+          "start_byte": 205,
+          "start_line": 12
+        }
+      },
+      "policy": "default",
+      "record_digest": "8869442c4baf76031ee3c5c59b125918861d5bb0c1027a570dabc20dac934d5ed1558d8fe6b9d0eefbeb8688479d464d4aae8b4ed2cfff086148851440db8d73",
+      "repository_id": "427f0c2edd2f13887282bf4c4ff201b102ee0804ae5b3286c2d7456d4878c5a05d502dc1c79f2266319f5c645480e64fdca82c2ac4191828fda33ef178c4fffd",
+      "signature": "c0a7ce42c06f72342610d4c69ede5bc90a99e8979fc792f0103863225708417d5cc824c49d618b8a58b3cc7573ebaf582505eabcc22709fd41f4206717d62c00",
+      "status": "ACTIVE"
+    }
+  ]
+}
