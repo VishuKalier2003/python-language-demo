@@ -1,0 +1,20 @@
+version: 1
+zones:
+  - id: test-zone-fee
+    description: Testing the zone
+    selectors:
+      files:
+        - payments/service.py
+    criticality: routine
+    autonomy_ceiling: delegated
+    policies: []
+    context_packs: [ test-zone-fee-context ]
+    status: active
+    version: 2
+context_packs:
+  - id: test-zone-fee-context
+    version: 1
+    description: Guidance for zone test-zone-fee
+    content:
+      - The fee is always divided by 10, in case of fee for plants it is
+        expected to divide by 5
