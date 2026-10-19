@@ -1,0 +1,80 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "hooks": [
+          {
+            "command": "crane agent hook --event post-tool-use --profile claude",
+            "timeout": 120,
+            "type": "command"
+          }
+        ],
+        "matcher": "*"
+      }
+    ],
+    "PreToolUse": [
+      {
+        "hooks": [
+          {
+            "command": "crane agent hook --event pre-tool-use --profile claude",
+            "timeout": 120,
+            "type": "command"
+          }
+        ],
+        "matcher": "*"
+      }
+    ],
+    "SessionEnd": [
+      {
+        "hooks": [
+          {
+            "command": "crane agent hook --event session-end --profile claude",
+            "timeout": 120,
+            "type": "command"
+          }
+        ]
+      }
+    ],
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "command": "crane agent hook --event session-start --profile claude",
+            "timeout": 120,
+            "type": "command"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "command": "crane agent hook --event stop --profile claude",
+            "timeout": 120,
+            "type": "command"
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "command": "crane agent hook --event user-prompt-submit --profile claude",
+            "timeout": 120,
+            "type": "command"
+          }
+        ]
+      }
+    ]
+  },
+  "permissions": {
+    "deny": [
+      "Edit(./.crane/**)",
+      "Write(./.crane/**)",
+      "Edit(./.claude/settings.json)",
+      "Edit(./.claude/settings.local.json)"
+    ]
+  }
+}
