@@ -1,0 +1,61 @@
+{
+  "hooks": {
+    "agentStop": [
+      {
+        "bash": "crane agent hook --event stop --profile copilot",
+        "powershell": "crane agent hook --event stop --profile copilot",
+        "timeoutSec": 120,
+        "type": "command"
+      }
+    ],
+    "postToolUse": [
+      {
+        "bash": "crane agent hook --event post-tool-use --profile copilot",
+        "powershell": "crane agent hook --event post-tool-use --profile copilot",
+        "timeoutSec": 120,
+        "type": "command"
+      }
+    ],
+    "postToolUseFailure": [
+      {
+        "bash": "crane agent hook --event post-tool-use-failure --profile copilot",
+        "powershell": "crane agent hook --event post-tool-use-failure --profile copilot",
+        "timeoutSec": 120,
+        "type": "command"
+      }
+    ],
+    "preToolUse": [
+      {
+        "bash": "crane agent hook --event pre-tool-use --profile copilot",
+        "powershell": "crane agent hook --event pre-tool-use --profile copilot",
+        "timeoutSec": 120,
+        "type": "command"
+      }
+    ],
+    "sessionEnd": [
+      {
+        "bash": "crane agent hook --event session-end --profile copilot",
+        "powershell": "crane agent hook --event session-end --profile copilot",
+        "timeoutSec": 120,
+        "type": "command"
+      }
+    ],
+    "sessionStart": [
+      {
+        "bash": "crane agent hook --event session-start --profile copilot",
+        "powershell": "crane agent hook --event session-start --profile copilot",
+        "timeoutSec": 120,
+        "type": "command"
+      }
+    ],
+    "userPromptSubmitted": [
+      {
+        "bash": "crane agent hook --event user-prompt-submit --profile copilot",
+        "powershell": "crane agent hook --event user-prompt-submit --profile copilot",
+        "timeoutSec": 120,
+        "type": "command"
+      }
+    ]
+  },
+  "version": 1
+}

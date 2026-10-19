@@ -1,0 +1,94 @@
+{
+  "activation": null,
+  "active": false,
+  "digest": "sha256:6ad0bf876575d833bc2d25175989aa07733fa27b6d2801982ea9200f535c360b",
+  "discovered_by": {
+    "head": "e88da8150ca51be5d872cbbb181ca894f7b19413",
+    "recommender": "zone-recommender@1",
+    "run": "discovery-2f9ea0cfc12d"
+  },
+  "history": [
+    {
+      "action": "proposed",
+      "at": 1791373657,
+      "by": "vishukalier123@gmail.com",
+      "detail": {
+        "run": "discovery-2f9ea0cfc12d"
+      },
+      "digest": "sha256:6ad0bf876575d833bc2d25175989aa07733fa27b6d2801982ea9200f535c360b",
+      "revision": 1
+    }
+  ],
+  "id": "payments",
+  "recommendation": {
+    "affected": {
+      "entities": 5,
+      "entity_examples": [
+        "symbol:python:payments.service.PaymentService",
+        "symbol:python:payments.service.PaymentService.charge",
+        "symbol:python:payments.service.PaymentService.refund",
+        "symbol:python:payments.service.PaymentService.fee",
+        "symbol:python:payments.service.calculate_tax"
+      ],
+      "files": [
+        "payments/service.py"
+      ]
+    },
+    "autonomy": "assisted",
+    "category": "payments",
+    "confidence": "high",
+    "covered_by_active_zones": false,
+    "criticality": "critical",
+    "digest": "sha256:6ad0bf876575d833bc2d25175989aa07733fa27b6d2801982ea9200f535c360b",
+    "rationale": [
+      "1 module(s) hold payment processing, refunds, and transactions: 4 symbol(s) show it"
+    ],
+    "safety_state": "active",
+    "selector_status": [
+      {
+        "selector": "module python:payments.service",
+        "status": "resolved"
+      }
+    ],
+    "selectors": [
+      "module python:payments.service"
+    ],
+    "signals": [
+      {
+        "examples": [
+          "PaymentService",
+          "PaymentService.charge",
+          "PaymentService.fee"
+        ],
+        "signal": "pack:payment_processing",
+        "symbols": 3
+      },
+      {
+        "examples": [
+          "PaymentService.refund"
+        ],
+        "signal": "pack:refunds",
+        "symbols": 1
+      },
+      {
+        "examples": [
+          "PaymentService",
+          "PaymentService.charge",
+          "PaymentService.fee"
+        ],
+        "signal": "payment_name:payment",
+        "symbols": 4
+      }
+    ],
+    "sources": [
+      "pack:payments@1",
+      "proposals:engine"
+    ]
+  },
+  "rejection": null,
+  "review_format": 1,
+  "revision": 1,
+  "status": "proposed",
+  "zone_id": "payments",
+  "zone_text": "zone payments {\n    criticality critical;\n    autonomy assisted;\n    state active;\n    select module python:payments.service;\n}\n"
+}

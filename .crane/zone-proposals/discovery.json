@@ -1,0 +1,71 @@
+{
+  "latest": {
+    "at": 1791375642,
+    "by": "vishukalier123@gmail.com",
+    "changes": [
+      {
+        "change": "unchanged",
+        "id": "payments",
+        "status": "proposed"
+      },
+      {
+        "change": "unchanged",
+        "id": "security",
+        "status": "proposed"
+      },
+      {
+        "change": "unchanged",
+        "id": "tests",
+        "status": "proposed"
+      }
+    ],
+    "existing_zones": [],
+    "head": "e88da8150ca51be5d872cbbb181ca894f7b19413",
+    "inventory": {
+      "files": 6,
+      "modules": 5,
+      "symbols": 12
+    },
+    "recommendations": [
+      "payments",
+      "security",
+      "tests"
+    ],
+    "recommender": "zone-recommender@1",
+    "run": "discovery-a77d73476b78",
+    "signals": {
+      "modules_with_evidence": 3,
+      "risk_scored_symbols": 7
+    },
+    "task_history": {
+      "modules_touched": 0,
+      "sessions_considered": 0
+    }
+  },
+  "runs": [
+    {
+      "at": 1791373657,
+      "head": "e88da8150ca51be5d872cbbb181ca894f7b19413",
+      "recommendations": 3,
+      "run": "discovery-2f9ea0cfc12d"
+    },
+    {
+      "at": 1791375239,
+      "head": "e88da8150ca51be5d872cbbb181ca894f7b19413",
+      "recommendations": 3,
+      "run": "discovery-6019973a1b4c"
+    },
+    {
+      "at": 1791375634,
+      "head": "e88da8150ca51be5d872cbbb181ca894f7b19413",
+      "recommendations": 3,
+      "run": "discovery-7a24397709a8"
+    },
+    {
+      "at": 1791375642,
+      "head": "e88da8150ca51be5d872cbbb181ca894f7b19413",
+      "recommendations": 3,
+      "run": "discovery-a77d73476b78"
+    }
+  ]
+}

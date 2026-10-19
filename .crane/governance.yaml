@@ -1,0 +1,92 @@
+version: 1
+zones:
+  - id: test-zone-fee
+    description: Testing the zone
+    selectors:
+      files:
+        - payments/service.py
+    criticality: routine
+    autonomy_ceiling: delegated
+    policies: []
+    context_packs: [ test-zone-fee-context ]
+    status: active
+    version: 2
+  - id: Payments
+    description: Payments channel
+    selectors:
+      files:
+        - payments/service.py
+    criticality: routine
+    autonomy_ceiling: autonomous
+    policies: []
+    context_packs: [ Payments-context ]
+    status: active
+    version: 2
+  - id: Correlation
+    description: Payment workflow
+    selectors:
+      files:
+        - payments/service.py
+    criticality: routine
+    autonomy_ceiling: delegated
+    policies: []
+    context_packs: [ Correlation-context ]
+    status: active
+    version: 2
+  - id: Sessions
+    description: Session data
+    selectors:
+      files:
+        - auth/session.py
+    criticality: sensitive
+    autonomy_ceiling: delegated
+    policies: []
+    context_packs: []
+    status: active
+    version: 1
+  - id: Tokens
+    description: Token principle
+    selectors:
+      files:
+        - auth/tokens.py
+    criticality: routine
+    autonomy_ceiling: autonomous
+    policies: []
+    context_packs:
+      - Tokens-context
+    status: active
+    version: 2
+  - id: Credentials-Auth
+    description: Credential functionality for auth service
+    selectors:
+      symbols:
+        - auth/credentials.py:find_user
+    criticality: sensitive
+    autonomy_ceiling: delegated
+    policies: []
+    context_packs: []
+    status: active
+    version: 1
+context_packs:
+  - id: test-zone-fee-context
+    version: 1
+    description: Guidance for zone test-zone-fee
+    content:
+      - The fee is always divided by 10, in case of fee for plants it is
+        expected to divide by 5
+  - id: Payments-context
+    version: 1
+    description: Guidance for zone Payments
+    content:
+      - This Payment service is the inheritance class for the child classes.
+  - id: Correlation-context
+    version: 1
+    description: Guidance for zone Correlation
+    content:
+      - Introduced as the vital parent class for payment service.
+  - id: Tokens-context
+    version: 1
+    description: Guidance for zone Tokens
+    content:
+      - Stores the auth token creation technique.
+flows: []

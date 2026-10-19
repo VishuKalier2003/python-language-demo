@@ -1,0 +1,72 @@
+{
+  "activation": null,
+  "active": false,
+  "digest": "sha256:a26832d78b9de851ab4323b4d757872cd1e1413434c3fafb7b2cfdb5536c86d2",
+  "discovered_by": {
+    "head": "e88da8150ca51be5d872cbbb181ca894f7b19413",
+    "recommender": "zone-recommender@1",
+    "run": "discovery-2f9ea0cfc12d"
+  },
+  "history": [
+    {
+      "action": "proposed",
+      "at": 1791373657,
+      "by": "vishukalier123@gmail.com",
+      "detail": {
+        "run": "discovery-2f9ea0cfc12d"
+      },
+      "digest": "sha256:a26832d78b9de851ab4323b4d757872cd1e1413434c3fafb7b2cfdb5536c86d2",
+      "revision": 1
+    }
+  ],
+  "id": "tests",
+  "recommendation": {
+    "affected": {
+      "entities": 4,
+      "entity_examples": [
+        "symbol:python:tests.test_labels.test_label",
+        "symbol:python:tests.test_payment.test_charge",
+        "symbol:python:tests.test_payment.test_refund",
+        "symbol:python:tests.test_payment.test_tax"
+      ],
+      "files": [
+        "tests/test_labels.py",
+        "tests/test_payment.py"
+      ]
+    },
+    "autonomy": "delegated",
+    "category": "tests",
+    "confidence": "high",
+    "covered_by_active_zones": false,
+    "criticality": "routine",
+    "digest": "sha256:a26832d78b9de851ab4323b4d757872cd1e1413434c3fafb7b2cfdb5536c86d2",
+    "rationale": [
+      "test code: agents may change it within their task; contract tests never depend on it"
+    ],
+    "safety_state": "active",
+    "selector_status": [
+      {
+        "selector": "tests",
+        "status": "resolved"
+      }
+    ],
+    "selectors": [
+      "tests"
+    ],
+    "signals": [
+      {
+        "files": 2,
+        "signal": "test_files"
+      }
+    ],
+    "sources": [
+      "pack:testing@1"
+    ]
+  },
+  "rejection": null,
+  "review_format": 1,
+  "revision": 1,
+  "status": "proposed",
+  "zone_id": "tests",
+  "zone_text": "zone tests {\n    criticality routine;\n    autonomy delegated;\n    state active;\n    select tests;\n}\n"
+}
